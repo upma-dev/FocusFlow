@@ -49,12 +49,17 @@ function App() {
       <div className="min-h-screen relative overflow-hidden">
         {/* Dynamic Background with Multiple Layers */}
         <div className="fixed inset-0">
-          {/* Base background image */}
+          {/* Base background with gradient */}
           <div 
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105"
+            className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop')",
-              filter: "brightness(0.3) saturate(1.2)"
+              backgroundImage: `
+                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)
+              `,
+              backgroundSize: '200% 200%',
+              animation: 'gradientShift 15s ease infinite'
             }}
           />
           
@@ -62,13 +67,24 @@ function App() {
           <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-purple-900/30 to-blue-900/40 animate-gradient-x"></div>
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-slate-900/50 to-slate-900/90"></div>
           
-          {/* Animated particles */}
-          <div className="absolute inset-0">
+          {/* Animated particles with enhanced design */}
+          <div className="absolute inset-0 overflow-hidden">
+            {/* Floating orbs */}
+            <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float-slow" style={{ top: '-10%', left: '-10%', animationDelay: '0s' }}></div>
+            <div className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-slow" style={{ top: '40%', right: '-10%', animationDelay: '2s' }}></div>
+            <div className="absolute w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-float-slow" style={{ bottom: '-10%', left: '30%', animationDelay: '4s' }}></div>
+            
+            {/* Animated particles */}
             <div className="absolute w-1 h-1 bg-white/20 rounded-full animate-float" style={{ top: '10%', left: '20%', animationDelay: '0s' }}></div>
             <div className="absolute w-1.5 h-1.5 bg-white/30 rounded-full animate-float" style={{ top: '30%', left: '50%', animationDelay: '1s' }}></div>
             <div className="absolute w-1 h-1 bg-white/20 rounded-full animate-float" style={{ top: '50%', left: '80%', animationDelay: '2s' }}></div>
             <div className="absolute w-1.5 h-1.5 bg-white/30 rounded-full animate-float" style={{ top: '70%', left: '30%', animationDelay: '3s' }}></div>
             <div className="absolute w-1 h-1 bg-white/20 rounded-full animate-float" style={{ top: '20%', left: '70%', animationDelay: '4s' }}></div>
+            
+            {/* Additional particles */}
+            <div className="absolute w-2 h-2 bg-blue-400/20 rounded-full animate-float-slow" style={{ top: '15%', left: '40%', animationDelay: '0.5s' }}></div>
+            <div className="absolute w-2 h-2 bg-purple-400/20 rounded-full animate-float-slow" style={{ top: '60%', left: '20%', animationDelay: '1.5s' }}></div>
+            <div className="absolute w-2 h-2 bg-indigo-400/20 rounded-full animate-float-slow" style={{ top: '25%', left: '85%', animationDelay: '2.5s' }}></div>
           </div>
         </div>
 
@@ -148,21 +164,6 @@ function App() {
                 <span>📊</span> Upcoming
               </button>
             </nav>
-
-            <div className="mt-8 pt-8 border-t border-white/10">
-              <h3 className="text-sm font-medium text-white/40 mb-3">PROJECTS</h3>
-              <button 
-                onClick={(e) => {
-                  e.preventDefault()
-                  e.stopPropagation()
-                  // Add new project
-                  console.log('Add new project')
-                }}
-                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl text-white/60 hover:bg-white/5 hover:text-white transition-all duration-300 transform hover:translate-x-1"
-              >
-                <span>➕</span> Add Project
-              </button>
-            </div>
           </div>
 
           {/* Main Content Area with Enhanced Design */}
