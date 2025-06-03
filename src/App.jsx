@@ -89,19 +89,35 @@ function App() {
         </div>
 
         {/* Animated Quote Section with Enhanced Design */}
-        <div className="relative pt-8 pb-6 px-4 text-center">
-          <div className="max-w-4xl mx-auto">
-            <div className="animate-fade-in-up space-y-4">
-              <h1 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-2">
+        <div className="relative min-h-[40vh] flex items-center justify-center px-4">
+          <div className="w-full max-w-2xl mx-auto">
+            <div className="animate-fade-in-up text-center">
+              {/* Title */}
+              <h1 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-8">
                 TaskFlow
               </h1>
-              <div className="bg-white/5 backdrop-blur-lg rounded-xl p-4 border border-white/10 shadow-xl">
-                <h2 className="text-xl sm:text-2xl font-light text-white/90 mb-2">
-                  "The key to productivity is not working harder, but working smarter."
-                </h2>
-                <p className="text-white/60 text-sm">
-                  — Let's make your day more organized and efficient
-                </p>
+
+              {/* Quote box */}
+              <div className="relative">
+                {/* Background glow effect */}
+                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-lg"></div>
+                
+                {/* Main quote container */}
+                <div className="relative bg-slate-800/40 backdrop-blur-md rounded-xl p-8 border border-white/10 shadow-xl">
+                  {/* Quote mark */}
+                  <div className="absolute -top-4 left-8 w-8 h-8 bg-slate-800/40 border-t border-l border-white/10 rounded-tl-lg transform rotate-45"></div>
+                  
+                  {/* Quote content */}
+                  <div className="relative">
+                    <h2 className="text-xl sm:text-2xl text-white/90 mb-4 leading-relaxed">
+                      The key to productivity is not working harder, but working smarter.
+                    </h2>
+                    <div className="h-px w-24 mx-auto bg-gradient-to-r from-transparent via-white/30 to-transparent mb-4"></div>
+                    <p className="text-white/60 text-base">
+                      Let's make your day more organized and efficient
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
