@@ -54,69 +54,57 @@ function App() {
             className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900"
             style={{
               backgroundImage: `
-                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.15) 0%, transparent 50%)
+                radial-gradient(circle at 20% 20%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, transparent 50%)
               `,
               backgroundSize: '200% 200%',
-              animation: 'gradientShift 15s ease infinite'
+              animation: 'gradientShift 20s ease-in-out infinite'
             }}
           />
           
-          {/* Animated gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/40 via-purple-900/30 to-blue-900/40 animate-gradient-x"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-slate-900/50 to-slate-900/90"></div>
+          {/* Animated gradient overlays - reduced opacity */}
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-purple-900/15 to-blue-900/20 animate-gradient-x"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-slate-900/40 to-slate-900/80"></div>
           
-          {/* Animated particles with enhanced design */}
+          {/* Animated particles with reduced intensity */}
           <div className="absolute inset-0 overflow-hidden">
-            {/* Floating orbs */}
-            <div className="absolute w-96 h-96 bg-blue-500/10 rounded-full blur-3xl animate-float-slow" style={{ top: '-10%', left: '-10%', animationDelay: '0s' }}></div>
-            <div className="absolute w-96 h-96 bg-purple-500/10 rounded-full blur-3xl animate-float-slow" style={{ top: '40%', right: '-10%', animationDelay: '2s' }}></div>
-            <div className="absolute w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl animate-float-slow" style={{ bottom: '-10%', left: '30%', animationDelay: '4s' }}></div>
+            {/* Floating orbs - reduced opacity and slower animation */}
+            <div className="absolute w-96 h-96 bg-blue-500/5 rounded-full blur-3xl" style={{ top: '-10%', left: '-10%' }}></div>
+            <div className="absolute w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" style={{ top: '40%', right: '-10%' }}></div>
+            <div className="absolute w-96 h-96 bg-indigo-500/5 rounded-full blur-3xl" style={{ bottom: '-10%', left: '30%' }}></div>
             
-            {/* Animated particles */}
-            <div className="absolute w-1 h-1 bg-white/20 rounded-full animate-float" style={{ top: '10%', left: '20%', animationDelay: '0s' }}></div>
-            <div className="absolute w-1.5 h-1.5 bg-white/30 rounded-full animate-float" style={{ top: '30%', left: '50%', animationDelay: '1s' }}></div>
-            <div className="absolute w-1 h-1 bg-white/20 rounded-full animate-float" style={{ top: '50%', left: '80%', animationDelay: '2s' }}></div>
-            <div className="absolute w-1.5 h-1.5 bg-white/30 rounded-full animate-float" style={{ top: '70%', left: '30%', animationDelay: '3s' }}></div>
-            <div className="absolute w-1 h-1 bg-white/20 rounded-full animate-float" style={{ top: '20%', left: '70%', animationDelay: '4s' }}></div>
+            {/* Static particles - removed animation */}
+            <div className="absolute w-1 h-1 bg-white/10 rounded-full" style={{ top: '10%', left: '20%' }}></div>
+            <div className="absolute w-1.5 h-1.5 bg-white/15 rounded-full" style={{ top: '30%', left: '50%' }}></div>
+            <div className="absolute w-1 h-1 bg-white/10 rounded-full" style={{ top: '50%', left: '80%' }}></div>
+            <div className="absolute w-1.5 h-1.5 bg-white/15 rounded-full" style={{ top: '70%', left: '30%' }}></div>
+            <div className="absolute w-1 h-1 bg-white/10 rounded-full" style={{ top: '20%', left: '70%' }}></div>
             
-            {/* Additional particles */}
-            <div className="absolute w-2 h-2 bg-blue-400/20 rounded-full animate-float-slow" style={{ top: '15%', left: '40%', animationDelay: '0.5s' }}></div>
-            <div className="absolute w-2 h-2 bg-purple-400/20 rounded-full animate-float-slow" style={{ top: '60%', left: '20%', animationDelay: '1.5s' }}></div>
-            <div className="absolute w-2 h-2 bg-indigo-400/20 rounded-full animate-float-slow" style={{ top: '25%', left: '85%', animationDelay: '2.5s' }}></div>
+            {/* Additional particles - removed animation */}
+            <div className="absolute w-2 h-2 bg-blue-400/10 rounded-full" style={{ top: '15%', left: '40%' }}></div>
+            <div className="absolute w-2 h-2 bg-purple-400/10 rounded-full" style={{ top: '60%', left: '20%' }}></div>
+            <div className="absolute w-2 h-2 bg-indigo-400/10 rounded-full" style={{ top: '25%', left: '85%' }}></div>
           </div>
         </div>
 
-        {/* Animated Quote Section with Enhanced Design */}
-        <div className="relative min-h-[40vh] flex items-center justify-center px-4">
-          <div className="w-full max-w-2xl mx-auto">
-            <div className="animate-fade-in-up text-center">
-              {/* Title */}
-              <h1 className="text-3xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-8">
-                TaskFlow
-              </h1>
-
-              {/* Quote box */}
+        {/* Title Section with Enhanced Design */}
+        <div className="relative min-h-[30vh] flex items-center justify-center px-4">
+          <div className="w-full max-w-3xl mx-auto">
+            <div className="text-center">
+              {/* Main title with gradient effect */}
               <div className="relative">
-                {/* Background glow effect */}
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-2xl blur-lg"></div>
+                {/* Background glow - reduced intensity */}
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl blur-2xl"></div>
                 
-                {/* Main quote container */}
-                <div className="relative bg-slate-800/40 backdrop-blur-md rounded-xl p-8 border border-white/10 shadow-xl">
-                  {/* Quote mark */}
-                  <div className="absolute -top-4 left-8 w-8 h-8 bg-slate-800/40 border-t border-l border-white/10 rounded-tl-lg transform rotate-45"></div>
-                  
-                  {/* Quote content */}
-                  <div className="relative">
-                    <h2 className="text-xl sm:text-2xl text-white/90 mb-4 leading-relaxed">
-                      The key to productivity is not working harder, but working smarter.
-                    </h2>
-                    <div className="h-px w-24 mx-auto bg-gradient-to-r from-transparent via-white/30 to-transparent mb-4"></div>
-                    <p className="text-white/60 text-base">
-                      Let's make your day more organized and efficient
-                    </p>
-                  </div>
+                {/* Title container */}
+                <div className="relative">
+                  <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 mb-3 tracking-tight">
+                    TaskMaster Pro
+                  </h1>
+                  <p className="text-white/60 text-lg sm:text-xl font-light">
+                    Your Ultimate Task Management Companion
+                  </p>
                 </div>
               </div>
             </div>
@@ -188,9 +176,9 @@ function App() {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-6">
                   <div>
                     <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 flex items-center gap-2">
-                      <span className="text-blue-400">📝</span> My Tasks
+                      <span className="text-blue-400">📝</span> My TaskMaster Dashboard
                     </h1>
-                    <p className="text-white/60 mt-0.5">Manage your tasks efficiently</p>
+                    <p className="text-white/60 mt-0.5">Streamline your workflow, achieve more</p>
                   </div>
                   <div className="flex gap-2">
                     <button 
