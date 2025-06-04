@@ -2,7 +2,6 @@
 
 A beautiful and efficient todo list application built with React and modern web technologies. TaskFlow helps you organize your tasks with a sleek, intuitive interface and powerful features.
 
-![TaskFlow Screenshot](https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop)
 
 ## ✨ Features
 
@@ -80,8 +79,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Icons and emojis
 - React and Vite communities
 
-## 📧 Contact
-
-Your Name - [@yourtwitter](https://twitter.com/yourtwitter)
-
-Project Link: [https://github.com/yourusername/taskflow](https://github.com/yourusername/taskflow)
