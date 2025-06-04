@@ -28,7 +28,7 @@ A beautiful and efficient todo list application built with React and modern web 
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/taskflow.git
+git clone https://github.com/yourusername/FocusFlow
 ```
 
 2. Navigate to the project directory:
