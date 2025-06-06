@@ -54,17 +54,6 @@ To create a production build:
 npm run build
 ```
 
-## 🎯 Features to Implement
-
-- [ ] User authentication
-- [ ] Cloud synchronization
-- [ ] Task categories
-- [ ] Due dates and reminders
-- [ ] Task priorities
-- [ ] Search functionality
-- [ ] Task sharing
-- [ ] Mobile app version
-
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/taskflow/issues).
